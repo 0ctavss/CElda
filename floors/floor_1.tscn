@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://dl10e2cpuvhkp"]
+[gd_scene load_steps=18 format=3 uid="uid://bwbx10wfwpp33"]
 
 [ext_resource type="Texture2D" uid="uid://dkh2nxgwthfgo" path="res://art/scene/chest.png" id="1_1gv6c"]
 [ext_resource type="PackedScene" uid="uid://bh6hvqd66ir2i" path="res://art/Characters/Linsak/linsak.tscn" id="1_equ00"]
+[ext_resource type="Script" path="res://scripts/floor_1.gd" id="1_sabpl"]
 [ext_resource type="Texture2D" uid="uid://dlho0nwvjeafj" path="res://art/scene/door.png" id="2_kj5wq"]
 [ext_resource type="Texture2D" uid="uid://b63ionu6rlpuh" path="res://art/scene/floor_wood.png" id="2_ks8l1"]
 [ext_resource type="Texture2D" uid="uid://2mfonmodybl4" path="res://art/scene/plains.png" id="3_0s6o4"]
 [ext_resource type="Texture2D" uid="uid://b8xp63wmfq6bt" path="res://art/scene/objects.png" id="4_4frvk"]
 [ext_resource type="Texture2D" uid="uid://m5brpkgbpbuy" path="res://art/scene/safe_zone.png" id="5_ga1hg"]
+[ext_resource type="PackedScene" uid="uid://bwypmhc47x7l" path="res://art/Characters/Slime/slime.tscn" id="8_56v21"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ricl3"]
 texture = ExtResource("1_1gv6c")
@@ -369,8 +371,13 @@ sources/8 = SubResource("TileSetAtlasSource_1r2ad")
 sources/11 = SubResource("TileSetAtlasSource_ricl3")
 sources/13 = SubResource("TileSetAtlasSource_y31lg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pqet"]
+size = Vector2(202.5, 276)
+
 [node name="Floor_1" type="Node2D"]
 y_sort_enabled = true
+position = Vector2(3596, -1175)
+script = ExtResource("1_sabpl")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -386,4 +393,19 @@ layer_1/tile_data = PackedInt32Array(262061, 3, 7, 1114029, 131075, 4, 1179565, 
 
 [node name="linsak" parent="." instance=ExtResource("1_equ00")]
 position = Vector2(430, 5047)
-scale = Vector2(1, 1)
+
+[node name="Slime" parent="." instance=ExtResource("8_56v21")]
+position = Vector2(619, 5588)
+
+[node name="Slime2" parent="." instance=ExtResource("8_56v21")]
+position = Vector2(921, 2900)
+
+[node name="levelComplete" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelComplete"]
+z_index = 1
+position = Vector2(816.75, 2415)
+shape = SubResource("RectangleShape2D_4pqet")
+
+[connection signal="body_entered" from="levelComplete" to="." method="_on_level_complete_body_entered"]
+[connection signal="body_exited" from="levelComplete" to="." method="_on_level_complete_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bh6hvqd66ir2i"]
+[gd_scene load_steps=82 format=3 uid="uid://bh6hvqd66ir2i"]
 
 [ext_resource type="Texture2D" uid="uid://r4jat72iv5te" path="res://art/Characters/Linsak/front1.png" id="1_dghqc"]
 [ext_resource type="Script" path="res://scripts/linsak.gd" id="1_ivpjb"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://cgtvtr0oypv78" path="res://art/Characters/Linsak/walk_side3.png" id="36_31sqe"]
 [ext_resource type="Texture2D" uid="uid://txhohmattgxg" path="res://art/Characters/Linsak/walk_side4.png" id="37_mqdof"]
 [ext_resource type="Texture2D" uid="uid://by3o8mkqrbvgb" path="res://art/Characters/Linsak/walk_side5.png" id="38_v4kfh"]
+[ext_resource type="PackedScene" uid="uid://cextlmcckt7c0" path="res://gui/hearts_container.tscn" id="40_we8vd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fub0f"]
 atlas = ExtResource("1_dghqc")
@@ -370,22 +371,51 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vsqx4"]
-radius = 69.0
+radius = 74.0608
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1gnsi"]
+radius = 182.003
 
 [node name="linsak" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 3
 script = ExtResource("1_ivpjb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(519, 296)
+position = Vector2(34, 76)
 sprite_frames = SubResource("SpriteFrames_tgivs")
-animation = &"attack_front"
+animation = &"death"
 offset = Vector2(0, -140)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(499, 257)
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(11, 20)
 shape = SubResource("CircleShape2D_vsqx4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(591, 334)
+[node name="camara_floor1" type="Camera2D" parent="."]
+position = Vector2(5, -7)
 zoom = Vector2(0.4, 0.4)
+
+[node name="Hitbox" type="Area2D" parent="."]
+position = Vector2(10, -7)
+
+[node name="HB" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(14, -42)
+shape = SubResource("CircleShape2D_1gnsi")
+
+[node name="attackCooldown" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="attackEnemyCooldown" type="Timer" parent="."]
+
+[node name="heartsContainer" parent="." instance=ExtResource("40_we8vd")]
+z_index = 1
+offset_left = -1408.0
+offset_top = -784.0
+offset_right = -1368.0
+offset_bottom = -744.0
+scale = Vector2(10, 10)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="timeout" from="attackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="attackEnemyCooldown" to="." method="_on_attack_enemy_cooldown_timeout"]
