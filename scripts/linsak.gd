@@ -11,6 +11,7 @@ var enemyAttackCoolDown = true
 var attack = false
 var current_dir = "none"
 var current_act = "afk"
+var difficulty = 1
 var speed = 400.0
 
 func _ready():
@@ -24,9 +25,15 @@ func _physics_process(delta):
 	playerMovement(delta)
 	enemyAttack()
 
+	print(global.safeZone)
+
 	if health <= 0:
-		global.playerCurrentHealth = maxHealth
+		if difficulty == 0:
+			global.playerCurrentHealth = maxHealth
+		else:
+			global.playerCurrentHealth = global.healthFloor
 		global.changeFloor = true
+		global.safeZone = true
 	if global.changeFloor:
 		global.changeFloor = false
 		toFloor(global.currentFloor)

@@ -47,6 +47,16 @@ func _on_hitbox_body_entered(body:Node2D):
 	if body.has_method("player"):
 		playerInAttackZone = true
 
+
+		
+
 func dealDamage():
+	if global.safeZone:
+		playerChase = false
+	if global.safeZone == false:
+		if player != null:
+			playerChase = true
+
+
 	if playerInAttackZone and global.playerCurrentAttack == true:
 		enemyAlive = false
