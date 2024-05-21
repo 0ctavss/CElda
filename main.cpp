@@ -11,6 +11,7 @@ int main() {
     game.addSpectralEye(5, 5, 3);
     game.addSpectre(10, 10, 1.0f);
     game.addSpectre(15, 15, 1.5f);
+    game.addRat(3, 3, 2, 1, 1);
 
     // Bucle principal del juego
     while (true) {

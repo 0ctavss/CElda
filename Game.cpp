@@ -1,10 +1,14 @@
 #include "Game.h"
 
-Game::Game() : playerX(0), playerY(0) {}
+Game::Game() : playerX(0), playerY(0), playerHP(5) {}
 
 void Game::update() {
     for (auto& eye : spectralEyes) {
         eye.update(playerX, playerY);
+    }
+
+    for (auto& rat : rats) {
+        rat.update(playerX, playerY);
     }
 }
 
@@ -14,6 +18,10 @@ void Game::addSpectralEye(int x, int y, int range) {
 
 void Game::addSpectre(int x, int y, float speed) {
     spectres.emplace_back(x, y, speed);
+}
+
+void Game::addRat(int x, int y, int range, int speed, int damage) {
+    rats.emplace_back(x, y, range, speed, damage);
 }
 
 // Método llamado por los Ojos Espectrales cuando detectan al jugador
