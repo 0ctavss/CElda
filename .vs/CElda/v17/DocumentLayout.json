@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\SpectralEye.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SpectralEye.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Spectre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Spectre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Chocobo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Chocobo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Chocobo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,24 +35,16 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Rat.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rat.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\SpectralEye.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SpectralEye.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Spectre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Spectre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Rat.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rat.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\SpectralEye.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SpectralEye.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,17 +54,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 255,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Chocobo.cpp",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Chocobo.cpp",
               "RelativeDocumentMoniker": "Chocobo.cpp",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Chocobo.cpp",
               "RelativeToolTip": "Chocobo.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-21T02:35:11.58Z",
               "IsPinned": true,
@@ -64,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Chocobo.h",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Chocobo.h",
               "RelativeDocumentMoniker": "Chocobo.h",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Chocobo.h",
               "RelativeToolTip": "Chocobo.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-21T02:35:10.727Z",
               "IsPinned": true,
@@ -78,13 +86,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Rat.cpp",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Rat.cpp",
               "RelativeDocumentMoniker": "Rat.cpp",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Rat.cpp",
               "RelativeToolTip": "Rat.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-21T02:35:09.683Z",
               "IsPinned": true,
@@ -98,7 +106,7 @@
               "RelativeDocumentMoniker": "Rat.h",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Rat.h",
               "RelativeToolTip": "Rat.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-21T02:35:08.831Z",
               "IsPinned": true,
@@ -106,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "SpectralEye.cpp",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\SpectralEye.cpp",
               "RelativeDocumentMoniker": "SpectralEye.cpp",
@@ -120,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "SpectralEye.h",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\SpectralEye.h",
               "RelativeDocumentMoniker": "SpectralEye.h",
@@ -134,13 +142,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Spectre.h",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.h",
               "RelativeDocumentMoniker": "Spectre.h",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.h",
               "RelativeToolTip": "Spectre.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADYAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-21T02:48:08.93Z",
               "IsPinned": true,
@@ -148,13 +156,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Spectre.cpp",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.cpp",
               "RelativeDocumentMoniker": "Spectre.cpp",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Spectre.cpp",
               "RelativeToolTip": "Spectre.cpp",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAowIwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-21T02:48:03.296Z",
               "IsPinned": true,
@@ -162,13 +170,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-21T02:47:44.42Z",
               "IsPinned": true,
@@ -177,6 +185,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Game.h",
+              "RelativeDocumentMoniker": "Game.h",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Game.h",
+              "RelativeToolTip": "Game.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T03:40:11.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Game.cpp",
+              "RelativeDocumentMoniker": "Game.cpp",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\0ctavss\\CElda\\Game.cpp",
+              "RelativeToolTip": "Game.cpp",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-21T03:40:27.311Z",
+              "EditorCaption": ""
             }
           ]
         }

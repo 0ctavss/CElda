@@ -9,6 +9,9 @@ void Game::update() {
 
     for (auto& spectre : spectres) {
         spectre.update(playerX, playerY);
+        if (spectre.isChasing) {
+            spectre.alertNearbySpectres(spectres);
+        }
     }
 
     for (auto& rat : rats) {
