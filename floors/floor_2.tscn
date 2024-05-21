@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dm44rk6m0jmdv"]
+[gd_scene load_steps=3 format=3 uid="uid://dm44rk6m0jmdv"]
+
+[ext_resource type="PackedScene" uid="uid://bwypmhc47x7l" path="res://art/Characters/Slime/slime.tscn" id="1_e08ub"]
+[ext_resource type="PackedScene" uid="uid://bh6hvqd66ir2i" path="res://art/Characters/Linsak/linsak.tscn" id="2_icr0b"]
 
 [node name="Floor2" type="Node2D"]
+
+[node name="Slime" parent="." instance=ExtResource("1_e08ub")]
+
+[node name="linsak" parent="." instance=ExtResource("2_icr0b")]
+position = Vector2(754, 620)

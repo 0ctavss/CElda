@@ -1,14 +1,14 @@
 extends CharacterBody2D
 var dieScene = load("res://floors/end_game_die.tscn")
 var floor_1 = load("res://floors/floor_1.tscn")
+var floor_2 = load("res://floors/floor_2.tscn")
 var enemyInAttackRange = false
 var enemyAttackCoolDown = true
 @export var maxHealth = 5
-@onready var health = maxHealth
+@onready var health = global.playerCurrentHealth
 @onready var heartsContainer = $heartsContainer
 
 var attack = false
-
 var current_dir = "none"
 var current_act = "afk"
 var speed = 400.0
@@ -16,7 +16,8 @@ var speed = 400.0
 func _ready():
 	$AnimatedSprite2D.play("afk")
 	heartsContainer.setMaxHearts(maxHealth)
-	heartsContainer.updateHearts(global.playerCurrentHealth)
+	heartsContainer.updateHearts(health)
+
 
 
 func _physics_process(delta):
@@ -24,11 +25,11 @@ func _physics_process(delta):
 	enemyAttack()
 
 	if health <= 0:
-		health = 0
-		get_tree().change_scene_to_packed(dieScene)
-		var current_act = "die"
-		linsak_anim(0)
-		
+		global.playerCurrentHealth = maxHealth
+		global.changeFloor = true
+	if global.changeFloor:
+		global.changeFloor = false
+		toFloor(global.currentFloor)
 
 func playerMovement(delta):
 	if Input.is_action_pressed("hurry_move"):
@@ -131,6 +132,7 @@ func linsak_anim(movement):
 			
 		elif current_act == "die":
 			anim.play("death")
+			await get_tree().create_timer(1.0).timeout
 			
 
 func player():
@@ -159,3 +161,9 @@ func _on_attack_enemy_cooldown_timeout():
 	$attackEnemyCooldown.stop()
 	global.playerCurrentAttack = false
 	attack = false
+
+func toFloor(floor: int):
+	if floor == 1:
+		get_tree().change_scene_to_packed(floor_1)
+	if floor == 2:
+		get_tree().change_scene_to_packed(floor_2)

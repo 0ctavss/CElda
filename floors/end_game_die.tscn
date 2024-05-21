@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtdm7jdkh0au"]
+[gd_scene load_steps=8 format=3 uid="uid://dtdm7jdkh0au"]
 
+[ext_resource type="Script" path="res://scripts/end_game_die.gd" id="1_2hywo"]
 [ext_resource type="Texture2D" uid="uid://b6rru8lhcf8se" path="res://art/scene/walls.png" id="1_46riw"]
 [ext_resource type="Texture2D" uid="uid://2mfonmodybl4" path="res://art/scene/plains.png" id="2_2wugi"]
 [ext_resource type="PackedScene" uid="uid://bh6hvqd66ir2i" path="res://art/Characters/Linsak/linsak.tscn" id="3_cwkx2"]
@@ -116,6 +117,7 @@ sources/1 = SubResource("TileSetAtlasSource_lvttd")
 
 [node name="EndGameDie" type="Node2D"]
 position = Vector2(37, 75)
+script = ExtResource("1_2hywo")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_jwocq")
@@ -127,3 +129,11 @@ layer_1/tile_data = PackedInt32Array(589842, 65536, 0, 655378, 65536, 1, 720914,
 
 [node name="linsak" parent="." instance=ExtResource("3_cwkx2")]
 position = Vector2(513, 287)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 372.0
+offset_top = 585.0
+offset_right = 667.0
+offset_bottom = 704.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
