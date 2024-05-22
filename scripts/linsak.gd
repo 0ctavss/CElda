@@ -7,6 +7,8 @@ var enemyAttackCoolDown = true
 @export var maxHealth = 5
 @onready var health = global.playerCurrentHealth
 @onready var heartsContainer = $heartsContainer
+@onready var pointsLabel: Label = $points/currentPoints
+@onready var chestsLabel: Label = $chest/currentChests
 
 var attack = false
 var current_dir = "none"
@@ -24,10 +26,18 @@ func _ready():
 func _physics_process(delta):
 	playerMovement(delta)
 	enemyAttack()
+	pointsLabel.text = str(global.currentPoints)
+	chestsLabel.text = str(global.currentChestOpen)
 
-	print(global.safeZone)
+	print(global.currentPoints)
+	print(global.currentChestOpen)
+	print(current_act)
+	print(global.playerCurrentHealth)
+	print(global.playerCurrentAttack)
 
 	if health <= 0:
+		global.currentPoints = global.pointsFloor
+		global.currentChestOpen = global.chestFloorOpen
 		if difficulty == 0:
 			global.playerCurrentHealth = maxHealth
 		else:
@@ -77,6 +87,12 @@ func playerMovement(delta):
 	elif Input.is_action_pressed("cover_move"):
 		current_act = "cover"
 		linsak_anim(0)
+	elif Input.is_action_pressed("ui_select"):
+		if global.currentChestOpen == 12:
+			current_act = "RUPIAS"
+			linsak_anim(0)
+		else:
+			print("Rupias insuficientes")
 	else:
 		current_act = "afk"
 		linsak_anim(0)
@@ -107,6 +123,8 @@ func linsak_anim(movement):
 	elif movement == 0:
 		if current_act == "afk":
 			anim.play("afk")
+		elif current_act == "RUPIAS":
+			anim.play("hold")
 		elif current_act == "attack":
 			global.playerCurrentAttack = true
 			attack = true
@@ -159,7 +177,8 @@ func enemyAttack():
 		global.playerCurrentHealth = health
 		enemyAttackCoolDown = false
 		$attackCooldown.start()
-		heartsContainer.updateHearts(global.playerCurrentHealth)
+	health = global.playerCurrentHealth
+	heartsContainer.updateHearts(health)
 
 func _on_attack_cooldown_timeout():
 	enemyAttackCoolDown = true

@@ -11,7 +11,8 @@ func _on_level_complete_body_entered(body:Node2D):
 		global.currentFloor += 1
 		global.healthFloor = global.playerCurrentHealth
 		global.changeFloor = true
-
+		global.chestFloorOpen = global.currentChestOpen
+		global.pointsFloor = global.currentPoints
 
 
 func _on_safe_zone_body_exited(body:Node2D):

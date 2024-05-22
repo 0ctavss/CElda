@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://bh6hvqd66ir2i"]
+[gd_scene load_steps=86 format=3 uid="uid://bh6hvqd66ir2i"]
 
 [ext_resource type="Texture2D" uid="uid://r4jat72iv5te" path="res://art/Characters/Linsak/front1.png" id="1_dghqc"]
 [ext_resource type="Script" path="res://scripts/linsak.gd" id="1_ivpjb"]
@@ -40,6 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://txhohmattgxg" path="res://art/Characters/Linsak/walk_side4.png" id="37_mqdof"]
 [ext_resource type="Texture2D" uid="uid://by3o8mkqrbvgb" path="res://art/Characters/Linsak/walk_side5.png" id="38_v4kfh"]
 [ext_resource type="PackedScene" uid="uid://cextlmcckt7c0" path="res://gui/hearts_container.tscn" id="40_we8vd"]
+[ext_resource type="FontFile" uid="uid://bj8be0goberpy" path="res://art/font.ttf" id="41_ve305"]
+[ext_resource type="Texture2D" uid="uid://sycdrhnki5pq" path="res://art/scene/rupia.png" id="42_y6u0i"]
+[ext_resource type="Texture2D" uid="uid://dkh2nxgwthfgo" path="res://art/scene/chest.png" id="43_jyrbm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fub0f"]
 atlas = ExtResource("1_dghqc")
@@ -376,6 +379,13 @@ radius = 74.0608
 [sub_resource type="CircleShape2D" id="CircleShape2D_1gnsi"]
 radius = 182.003
 
+[sub_resource type="LabelSettings" id="LabelSettings_1b7h8"]
+font = ExtResource("41_ve305")
+font_size = 100
+font_color = Color(0.831373, 0.686275, 0.215686, 1)
+shadow_size = 6
+shadow_color = Color(0.74902, 0.388235, 0.568627, 0)
+
 [node name="linsak" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 3
@@ -415,6 +425,55 @@ offset_top = -784.0
 offset_right = -1368.0
 offset_bottom = -744.0
 scale = Vector2(10, 10)
+
+[node name="points" type="HBoxContainer" parent="."]
+z_index = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1125.0
+offset_top = -796.0
+offset_right = 1417.0
+offset_bottom = -661.0
+grow_horizontal = 0
+alignment = 1
+
+[node name="currentPoints" type="Label" parent="points"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_1b7h8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="points"]
+position = Vector2(-78, 72)
+scale = Vector2(0.963415, 0.548889)
+texture = ExtResource("42_y6u0i")
+
+[node name="chest" type="HBoxContainer" parent="."]
+z_index = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1126.0
+offset_top = -643.0
+offset_right = 1418.0
+offset_bottom = -508.0
+grow_horizontal = 0
+alignment = 1
+
+[node name="currentChests" type="Label" parent="chest"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_1b7h8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="chest"]
+position = Vector2(-73, 69)
+scale = Vector2(4.19398, 3.54688)
+texture = ExtResource("43_jyrbm")
+hframes = 4
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

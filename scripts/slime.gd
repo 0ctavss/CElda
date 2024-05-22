@@ -22,6 +22,7 @@ func _physics_process(delta):
 	else:
 		if enemyAlive == false:
 			$AnimatedSprite2D.play("die")
+			global.currentPoints += 2
 			await get_tree().create_timer(1.0).timeout
 			self.queue_free()
 		else:
