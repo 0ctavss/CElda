@@ -223,7 +223,9 @@ script = ExtResource("1_mprrr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_225rm")
-animation = &"stand"
+animation = &"die"
+frame = 3
+frame_progress = 0.658239
 metadata/_edit_group_ = true
 
 [node name="detectionArea" type="Area2D" parent="."]

@@ -394,8 +394,8 @@ script = ExtResource("1_ivpjb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(34, 76)
 sprite_frames = SubResource("SpriteFrames_tgivs")
-animation = &"death"
-frame_progress = 0.0524831
+animation = &"attack_front"
+frame_progress = 0.0745609
 offset = Vector2(0, -140)
 
 [node name="Collision" type="CollisionShape2D" parent="."]

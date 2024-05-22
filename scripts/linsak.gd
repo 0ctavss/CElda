@@ -11,6 +11,7 @@ var enemyAttackCoolDown = true
 @onready var chestsLabel: Label = $chest/currentChests
 
 var attack = false
+var currentEnemy = "none"
 var current_dir = "none"
 var current_act = "afk"
 var difficulty = 1
@@ -29,11 +30,7 @@ func _physics_process(delta):
 	pointsLabel.text = str(global.currentPoints)
 	chestsLabel.text = str(global.currentChestOpen)
 
-	print(global.currentPoints)
-	print(global.currentChestOpen)
-	print(current_act)
-	print(global.playerCurrentHealth)
-	print(global.playerCurrentAttack)
+	print(currentEnemy)
 
 	if health <= 0:
 		global.currentPoints = global.pointsFloor
@@ -165,15 +162,23 @@ func player():
 
 func _on_hitbox_body_exited(body:Node2D):
 	if body.has_method("enemy"):
+		currentEnemy = "none"
 		enemyInAttackRange = false 
 
 func _on_hitbox_body_entered(body:Node2D):
 	if body.has_method("enemy"):
+		currentEnemy = body.enemyName
 		enemyInAttackRange = true
 
 func enemyAttack():
 	if enemyInAttackRange and enemyAttackCoolDown == true:
-		health = health - 1
+		if currentEnemy == "Slime":
+			health = health - 1
+		if currentEnemy == "Rat":
+			health = health - 1
+		if currentEnemy == "Espectre":
+			health = 0
+			
 		global.playerCurrentHealth = health
 		enemyAttackCoolDown = false
 		$attackCooldown.start()

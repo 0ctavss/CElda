@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bwbx10wfwpp33"]
+[gd_scene load_steps=25 format=3 uid="uid://bwbx10wfwpp33"]
 
 [ext_resource type="Texture2D" uid="uid://dkh2nxgwthfgo" path="res://art/scene/chest.png" id="1_1gv6c"]
 [ext_resource type="PackedScene" uid="uid://bh6hvqd66ir2i" path="res://art/Characters/Linsak/linsak.tscn" id="1_equ00"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://bwypmhc47x7l" path="res://art/Characters/Slime/slime.tscn" id="8_56v21"]
 [ext_resource type="PackedScene" uid="uid://ct28oleuudubl" path="res://art/scene/chest.tscn" id="10_nwj21"]
 [ext_resource type="PackedScene" uid="uid://djcc4agm07bw" path="res://art/scene/vase.tscn" id="11_x1gpr"]
+[ext_resource type="PackedScene" uid="uid://nkw1y80ut5yd" path="res://art/Characters/GreyEspectre/greyEspectre.tscn" id="12_1148f"]
+[ext_resource type="PackedScene" uid="uid://d1xlsg8ri7x0r" path="res://art/scene/trap_1.tscn" id="13_kwjop"]
+[ext_resource type="PackedScene" uid="uid://vbfqn5jrakms" path="res://art/scene/trap_2.tscn" id="14_iggpn"]
+[ext_resource type="PackedScene" uid="uid://ds45u7um4a37j" path="res://art/Characters/Rats/rat.tscn" id="15_7g2xb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ricl3"]
 texture = ExtResource("1_1gv6c")
@@ -459,6 +463,24 @@ position = Vector2(4246, 3961)
 
 [node name="vase4" parent="." instance=ExtResource("11_x1gpr")]
 position = Vector2(-2820, 3962)
+
+[node name="greyEspectre" parent="." instance=ExtResource("12_1148f")]
+position = Vector2(786, 3979)
+
+[node name="trap1" parent="." instance=ExtResource("13_kwjop")]
+position = Vector2(-734, 5258)
+
+[node name="trap2" parent="." instance=ExtResource("13_kwjop")]
+position = Vector2(-2167, 4816)
+
+[node name="trap3" parent="." instance=ExtResource("14_iggpn")]
+position = Vector2(3607, 6236)
+
+[node name="trap4" parent="." instance=ExtResource("14_iggpn")]
+position = Vector2(2155, 5737)
+
+[node name="rat" parent="." instance=ExtResource("15_7g2xb")]
+position = Vector2(84, 5919)
 
 [connection signal="body_entered" from="levelComplete" to="." method="_on_level_complete_body_entered"]
 [connection signal="body_exited" from="levelComplete" to="." method="_on_level_complete_body_exited"]

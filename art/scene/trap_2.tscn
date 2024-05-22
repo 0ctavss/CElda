@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://vbfqn5jrakms"]
+
+[ext_resource type="Script" path="res://scripts/trap_2.gd" id="1_o0cnj"]
+[ext_resource type="Texture2D" uid="uid://cj40e2htxj4l7" path="res://art/scene/Kunai.png" id="1_yugiv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgbwl"]
+atlas = ExtResource("1_yugiv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bxflt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgbwl")
+}],
+"loop": true,
+"name": &"trap",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shi6r"]
+radius = 5.0
+height = 22.0
+
+[node name="trap2" type="CharacterBody2D"]
+scale = Vector2(10, 10)
+script = ExtResource("1_o0cnj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -0.792379
+sprite_frames = SubResource("SpriteFrames_bxflt")
+animation = &"trap"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_shi6r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
