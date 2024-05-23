@@ -121,7 +121,6 @@ animation = &"walk_back"
 frame_progress = 0.438102
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_ih6is")
 
 [node name="Area2D" type="Area2D" parent="."]

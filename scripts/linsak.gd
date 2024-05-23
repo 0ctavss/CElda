@@ -22,15 +22,11 @@ func _ready():
 	heartsContainer.setMaxHearts(maxHealth)
 	heartsContainer.updateHearts(health)
 
-
-
 func _physics_process(delta):
 	playerMovement(delta)
 	enemyAttack()
 	pointsLabel.text = str(global.currentPoints)
 	chestsLabel.text = str(global.currentChestOpen)
-
-	print(currentEnemy)
 
 	if health <= 0:
 		global.currentPoints = global.pointsFloor
@@ -163,19 +159,26 @@ func player():
 func _on_hitbox_body_exited(body:Node2D):
 	if body.has_method("enemy"):
 		currentEnemy = "none"
-		enemyInAttackRange = false 
+		enemyInAttackRange = false
 
 func _on_hitbox_body_entered(body:Node2D):
-	if body.has_method("enemy"):
+	if body.has_method("enemy") or body.has_method("enemyShoot"):
 		currentEnemy = body.enemyName
 		enemyInAttackRange = true
 
 func enemyAttack():
 	if enemyInAttackRange and enemyAttackCoolDown == true:
 		if currentEnemy == "Slime":
-			health = health - 1
+			health -= 1
 		if currentEnemy == "Rat":
-			health = health - 1
+			health -= 1
+		if currentEnemy == "Flame":
+			currentEnemy = "none" #si quito esto hace daño de quemado
+			enemyInAttackRange = false #si quito esto hace daño de quemado
+			if current_act == "cover":
+				pass
+			else:
+				health -= 1
 		if currentEnemy == "Espectre":
 			health = 0
 			

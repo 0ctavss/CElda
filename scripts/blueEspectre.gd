@@ -13,6 +13,7 @@ var enemyName = "Espectre"
 func _physics_process(delta):
 
 	dealDamage()
+	teleport()
 
 	if playerChase and enemyAlive == true:
 		position += (player.position - position)/speed
@@ -37,11 +38,22 @@ func _physics_process(delta):
 
 
 func _on_detection_area_body_entered(body:Node2D):
-	player = body
-	playerChase = true
+	if body.has_method("enemy"):
+		if body.enemyName == "Rat":
+			$AnimatedSprite2D.play("scared")
+			speed = 0
+			print("un ratón")
+	else:
+		player = body
+		playerChase = true
+		print("vi algo")
 
 
 func _on_detection_area_body_exited(body:Node2D):
+	if body.has_method("enemy"):
+		if body.enemyName == "Rat":
+			$AnimatedSprite2D.play("stand")
+			speed = 30
 	player = null
 	playerChase = false
 
@@ -68,3 +80,8 @@ func dealDamage():
 
 	if playerInAttackZone and global.playerCurrentAttack == true:
 		enemyAlive = false
+
+func teleport():
+	if global.alertEnemy:
+		position.x = global.tpX
+		position.y = global.tpY

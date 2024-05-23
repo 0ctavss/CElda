@@ -377,7 +377,7 @@ animations = [{
 radius = 74.0608
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1gnsi"]
-radius = 182.003
+radius = 146.414
 
 [sub_resource type="LabelSettings" id="LabelSettings_1b7h8"]
 font = ExtResource("41_ve305")
@@ -410,7 +410,7 @@ zoom = Vector2(0.4, 0.4)
 position = Vector2(10, -7)
 
 [node name="HB" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(14, -42)
+position = Vector2(12, -30)
 shape = SubResource("CircleShape2D_1gnsi")
 
 [node name="attackCooldown" type="Timer" parent="."]

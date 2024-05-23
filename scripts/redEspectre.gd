@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var bullet_scene: PackedScene
 
 var speed = 30
 var playerChase = false
@@ -7,12 +8,14 @@ var enemyAlive = true
 var player = null
 var playerInAttackZone = false
 var enemyName = "Espectre"
-
+var canShoot = false
 
 
 func _physics_process(delta):
 
 	dealDamage()
+	if canShoot:
+		shoot()
 
 	if playerChase and enemyAlive == true:
 		position += (player.position - position)/speed
@@ -37,13 +40,27 @@ func _physics_process(delta):
 
 
 func _on_detection_area_body_entered(body:Node2D):
-	player = body
-	playerChase = true
+	if body.has_method("enemy"):
+		if body.enemyName == "Rat":
+			$AnimatedSprite2D.play("scared")
+			speed = 0
+			print("un ratón")
+	elif body.has_method("player"):
+		canShoot = true
+		player = body
+		playerChase = true
+		print("vi algo")
 
 
 func _on_detection_area_body_exited(body:Node2D):
-	player = null
-	playerChase = false
+	if body.has_method("enemy"):
+		if body.enemyName == "Rat":
+			$AnimatedSprite2D.play("stand")
+			speed = 30
+	elif body.has_method("player"):
+		canShoot = false
+		player = null
+		playerChase = false
 
 
 func _on_hitbox_body_entered(body:Node2D):
@@ -68,3 +85,10 @@ func dealDamage():
 
 	if playerInAttackZone and global.playerCurrentAttack == true:
 		enemyAlive = false
+
+func shoot():
+	var bullet_instance = bullet_scene.instantiate()
+	get_parent().add_child(bullet_instance)
+    
+	global.iniX = position.x
+	global.iniY = position.y

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://nkw1y80ut5yd"]
+[gd_scene load_steps=30 format=3 uid="uid://nkw1y80ut5yd"]
 
 [ext_resource type="Script" path="res://scripts/greyEspectre.gd" id="1_ohbrp"]
 [ext_resource type="Texture2D" uid="uid://bfk8y0cv7a6fp" path="res://art/Characters/GreyEspectre/Attack.png" id="2_4gr4a"]
@@ -24,6 +24,10 @@ region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4t686"]
 atlas = ExtResource("3_qx0t1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6hio"]
+atlas = ExtResource("4_cq2a2")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f11wj"]
@@ -111,6 +115,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_s6hio")
+}],
+"loop": true,
+"name": &"scared",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_f11wj")
 }, {
 "duration": 1.0,
@@ -189,7 +201,7 @@ script = ExtResource("1_ohbrp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_225rm")
-animation = &"walk_side"
+animation = &"attack"
 metadata/_edit_group_ = true
 
 [node name="detectionArea" type="Area2D" parent="."]

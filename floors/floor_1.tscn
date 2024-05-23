@@ -410,7 +410,7 @@ position = Vector2(688, 7938)
 position = Vector2(731, 2595)
 
 [node name="Slime3" parent="." instance=ExtResource("8_56v21")]
-position = Vector2(-1909, 5413)
+position = Vector2(-2574, 5413)
 
 [node name="levelComplete" type="Area2D" parent="."]
 
@@ -465,7 +465,13 @@ position = Vector2(4246, 3961)
 position = Vector2(-2820, 3962)
 
 [node name="greyEspectre" parent="." instance=ExtResource("12_1148f")]
-position = Vector2(786, 3979)
+position = Vector2(738, 3020)
+
+[node name="greyEspectre2" parent="." instance=ExtResource("12_1148f")]
+position = Vector2(-1007, 6737)
+
+[node name="greyEspectre3" parent="." instance=ExtResource("12_1148f")]
+position = Vector2(-971, 3932)
 
 [node name="trap1" parent="." instance=ExtResource("13_kwjop")]
 position = Vector2(-734, 5258)
@@ -480,7 +486,7 @@ position = Vector2(3607, 6236)
 position = Vector2(2155, 5737)
 
 [node name="rat" parent="." instance=ExtResource("15_7g2xb")]
-position = Vector2(84, 5919)
+position = Vector2(1341, 5862)
 
 [connection signal="body_entered" from="levelComplete" to="." method="_on_level_complete_body_entered"]
 [connection signal="body_exited" from="levelComplete" to="." method="_on_level_complete_body_exited"]
