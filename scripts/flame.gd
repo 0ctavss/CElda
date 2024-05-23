@@ -27,4 +27,3 @@ func enemyShoot():
 
 func destroy():
 	self.queue_free()
-	global.currentPoints += 10

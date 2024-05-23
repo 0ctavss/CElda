@@ -38,7 +38,7 @@ func _physics_process(delta):
 		else:
 			global.playerCurrentHealth = global.healthFloor
 		global.changeFloor = true
-		global.safeZone = true
+		global.safeZone = false
 	if global.changeFloor:
 		global.changeFloor = false
 		toFloor(global.currentFloor)
