@@ -2,6 +2,8 @@ extends CharacterBody2D
 var dieScene = load("res://floors/end_game_die.tscn")
 var floor_1 = load("res://floors/floor_1.tscn")
 var floor_2 = load("res://floors/floor_2.tscn")
+var floor_3 = load("res://floors/floor_3.tscn")
+var floor_4 = load("res://floors/floor_4.tscn")
 var enemyInAttackRange = false
 var enemyAttackCoolDown = true
 @export var maxHealth = 5
@@ -201,3 +203,7 @@ func toFloor(floor: int):
 		get_tree().change_scene_to_packed(floor_1)
 	if floor == 2:
 		get_tree().change_scene_to_packed(floor_2)
+	if floor == 3:
+		get_tree().change_scene_to_packed(floor_3)
+	if floor == 4:
+		get_tree().change_scene_to_packed(floor_4)
