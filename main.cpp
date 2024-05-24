@@ -1,12 +1,29 @@
 
-#include "Bresenham.h"
+#include "Spectre.h"
+#include "SpectralEye.h"
+#include "Rat.h"
+#include "Chocobo.h"
+#include "Game.h"
 
 int main() {
+    Game game;
 
+    // Agregar enemigos al juego
+    game.addSpectralEye(5, 5, 3);
+    game.addSpectre(10, 10, 1.0f);
+    game.addSpectre(15, 15, 1.5f);
+    game.addRat(3, 3, 2, 1, 1); 
+    game.addChocobo(7, 7, 4, 2, 1);
 
-    int x1 = 3, y1 = 2, x2 = 15, y2 = 5;
-    bresenham(x1, y1, x2, y2);
+    // Bucle principal del juego
+    while (true) {
+        // Actualizar el juego 
+        game.update();
 
+        //Lgica adicional del juego 
+    }
 
     return 0;
 }
+
+
