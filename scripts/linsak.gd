@@ -26,6 +26,37 @@ func _ready():
 	heartsContainer.updateHearts(health)
 
 func _physics_process(delta):
+	if global.currentFloor == 1:
+		$map1.visible = true
+		$map2.visible = false
+		$map3.visible = false
+		$map4.visible = false
+		$map5.visible = false
+	if global.currentFloor == 2:
+		$map1.visible = false
+		$map2.visible = true
+		$map3.visible = false
+		$map4.visible = false
+		$map5.visible = false
+	if global.currentFloor == 3:
+		$map1.visible = false
+		$map2.visible = false
+		$map3.visible = true
+		$map4.visible = false
+		$map5.visible = false
+	if global.currentFloor == 4:
+		$map1.visible = false
+		$map2.visible = false
+		$map3.visible = false
+		$map4.visible = true
+		$map5.visible = false
+	if global.currentFloor == 5:
+		$map1.visible = false
+		$map2.visible = false
+		$map3.visible = false
+		$map4.visible = false
+		$map5.visible = true
+
 	playerMovement(delta)
 	enemyAttack()
 	pointsLabel.text = str(global.currentPoints)

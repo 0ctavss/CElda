@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://bh6hvqd66ir2i"]
+[gd_scene load_steps=96 format=3 uid="uid://bh6hvqd66ir2i"]
 
 [ext_resource type="Texture2D" uid="uid://r4jat72iv5te" path="res://art/Characters/Linsak/front1.png" id="1_dghqc"]
 [ext_resource type="Script" path="res://scripts/linsak.gd" id="1_ivpjb"]
@@ -43,6 +43,11 @@
 [ext_resource type="FontFile" uid="uid://bj8be0goberpy" path="res://art/font.ttf" id="41_ve305"]
 [ext_resource type="Texture2D" uid="uid://sycdrhnki5pq" path="res://art/scene/rupia.png" id="42_y6u0i"]
 [ext_resource type="Texture2D" uid="uid://dkh2nxgwthfgo" path="res://art/scene/chest.png" id="43_jyrbm"]
+[ext_resource type="Texture2D" uid="uid://8ojswnjgqe0u" path="res://floors/minimap_1.png" id="44_jib78"]
+[ext_resource type="Texture2D" uid="uid://bbccq5kxnsu04" path="res://floors/minimap_2.png" id="45_1jp00"]
+[ext_resource type="Texture2D" uid="uid://bmw5bn051bk4i" path="res://floors/minimap_3.png" id="46_508v0"]
+[ext_resource type="Texture2D" uid="uid://l051rnk847bl" path="res://floors/minimap_4.png" id="47_avyvb"]
+[ext_resource type="Texture2D" uid="uid://lx24gfr7vnbb" path="res://floors/minimap_5.png" id="48_nbf8u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fub0f"]
 atlas = ExtResource("1_dghqc")
@@ -509,9 +514,44 @@ texture = SubResource("GradientTexture2D_hk823")
 [node name="Sprite2D" type="Sprite2D" parent="light"]
 modulate = Color(0.337255, 0.294118, 0.121569, 0.392157)
 material = SubResource("CanvasItemMaterial_l1biv")
-position = Vector2(0.371316, -0.871941)
+position = Vector2(0.337565, 0.581284)
 scale = Vector2(0.741825, 0.883288)
 texture = SubResource("GradientTexture2D_tqrjp")
+
+[node name="map1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+z_index = 3
+position = Vector2(1100, 500)
+scale = Vector2(1.347, 1.25)
+texture = ExtResource("44_jib78")
+
+[node name="map2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+z_index = 3
+position = Vector2(1100, 500)
+scale = Vector2(1.10939, 1.02872)
+texture = ExtResource("45_1jp00")
+
+[node name="map3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+z_index = 3
+position = Vector2(1107, 499)
+scale = Vector2(1.31881, 1.21364)
+texture = ExtResource("46_508v0")
+
+[node name="map4" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+z_index = 3
+position = Vector2(1111.25, 495.875)
+scale = Vector2(1.23816, 1.13366)
+texture = ExtResource("47_avyvb")
+
+[node name="map5" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+z_index = 3
+position = Vector2(1109.18, 498.625)
+scale = Vector2(1.64162, 1.5065)
+texture = ExtResource("48_nbf8u")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

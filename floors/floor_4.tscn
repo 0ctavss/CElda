@@ -534,7 +534,7 @@ size = Vector2(959, 959)
 
 [node name="Floor_4" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(3596, -1175)
+position = Vector2(5577, -337)
 script = ExtResource("1_2oc21")
 
 [node name="TileMap" type="TileMap" parent="."]
