@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://bh6hvqd66ir2i"]
+[gd_scene load_steps=91 format=3 uid="uid://bh6hvqd66ir2i"]
 
 [ext_resource type="Texture2D" uid="uid://r4jat72iv5te" path="res://art/Characters/Linsak/front1.png" id="1_dghqc"]
 [ext_resource type="Script" path="res://scripts/linsak.gd" id="1_ivpjb"]
@@ -386,6 +386,32 @@ font_color = Color(0.831373, 0.686275, 0.215686, 1)
 shadow_size = 6
 shadow_color = Color(0.74902, 0.388235, 0.568627, 0)
 
+[sub_resource type="Gradient" id="Gradient_melyd"]
+offsets = PackedFloat32Array(0.0180995, 0.674208)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hk823"]
+gradient = SubResource("Gradient_melyd")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l1biv"]
+blend_mode = 1
+light_mode = 2
+
+[sub_resource type="Gradient" id="Gradient_wbftm"]
+offsets = PackedFloat32Array(0, 0.00452489, 0.638009, 0.651584)
+colors = PackedColorArray(1, 1, 1, 1, 0.945946, 0.945946, 0.945946, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tqrjp"]
+gradient = SubResource("Gradient_wbftm")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="linsak" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 3
@@ -474,6 +500,18 @@ position = Vector2(-73, 69)
 scale = Vector2(4.19398, 3.54688)
 texture = ExtResource("43_jyrbm")
 hframes = 4
+
+[node name="light" type="PointLight2D" parent="."]
+position = Vector2(5.99982, -5.99995)
+scale = Vector2(14.8125, 8.60156)
+texture = SubResource("GradientTexture2D_hk823")
+
+[node name="Sprite2D" type="Sprite2D" parent="light"]
+modulate = Color(0.337255, 0.294118, 0.121569, 0.392157)
+material = SubResource("CanvasItemMaterial_l1biv")
+position = Vector2(0.371316, -0.871941)
+scale = Vector2(0.741825, 0.883288)
+texture = SubResource("GradientTexture2D_tqrjp")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

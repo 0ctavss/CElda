@@ -29,6 +29,10 @@ func _physics_process(delta):
 	enemyAttack()
 	pointsLabel.text = str(global.currentPoints)
 	chestsLabel.text = str(global.currentChestOpen)
+	if global.currentFloor == 2:
+		$light.set_enabled(true)
+	else:
+		$light.set_enabled(false)
 
 	if health <= 0:
 		global.currentPoints = global.pointsFloor

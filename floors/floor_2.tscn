@@ -634,6 +634,9 @@ position = Vector2(3754, 3996)
 [node name="redEspectre3" parent="." instance=ExtResource("3_ad2hs")]
 position = Vector2(330, 6515)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
 [connection signal="body_entered" from="levelComplete" to="." method="_on_level_complete_body_entered"]
 [connection signal="body_exited" from="levelComplete" to="." method="_on_level_complete_body_exited"]
 [connection signal="body_entered" from="safeZone" to="." method="_on_safe_zone_body_entered"]
