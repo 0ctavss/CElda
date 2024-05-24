@@ -1,6 +1,3 @@
-//
-// Created by MSI on 24/5/2024.
-//
 #include <bits/stdc++.h>
 #include "Bresenham.h"
 using namespace std;
