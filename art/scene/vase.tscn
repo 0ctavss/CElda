@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://djcc4agm07bw"]
+
+[ext_resource type="Script" path="res://scripts/vase.gd" id="1_d8t6r"]
+[ext_resource type="Texture2D" uid="uid://c6sju0au3govt" path="res://art/scene/vase.png" id="1_nn0qb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk1ij"]
+atlas = ExtResource("1_nn0qb")
+region = Rect2(0, 0, 9, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_00rff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk1ij")
+}],
+"loop": true,
+"name": &"vase",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g1uox"]
+radius = 6.4
+
+[node name="vase" type="CharacterBody2D"]
+scale = Vector2(20, 20)
+script = ExtResource("1_d8t6r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_00rff")
+animation = &"vase"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_g1uox")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
