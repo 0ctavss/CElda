@@ -4,6 +4,7 @@ var floor_1 = load("res://floors/floor_1.tscn")
 var floor_2 = load("res://floors/floor_2.tscn")
 var floor_3 = load("res://floors/floor_3.tscn")
 var floor_4 = load("res://floors/floor_4.tscn")
+var boss_floor = load("res://floors/boss_floor.tscn")
 var enemyInAttackRange = false
 var enemyAttackCoolDown = true
 @export var maxHealth = 5
@@ -49,7 +50,7 @@ func _physics_process(delta):
 
 func playerMovement(delta):
 	if Input.is_action_pressed("hurry_move"):
-		speed = 800.0
+		speed = 1000.0
 	if Input.is_action_pressed("ui_up") or Input.is_action_pressed("up_move"):
 		current_dir = "up"
 		linsak_anim(1)
@@ -187,6 +188,11 @@ func enemyAttack():
 				health -= 1
 		if currentEnemy == "Espectre":
 			health = 0
+		if currentEnemy == "Boss":
+			if health == 1:
+				health -= 1
+			else:
+				health = 1
 			
 		global.playerCurrentHealth = health
 		enemyAttackCoolDown = false
@@ -211,3 +217,5 @@ func toFloor(floor: int):
 		get_tree().change_scene_to_packed(floor_3)
 	if floor == 4:
 		get_tree().change_scene_to_packed(floor_4)
+	if floor == 5:
+		get_tree().change_scene_to_packed(boss_floor)
